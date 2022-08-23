@@ -1,0 +1,25 @@
+
+.input-group {
+    justify-content: center;
+}
+
+
+#search-btn {
+    border: 1px solid rgba(97, 94, 94, .3);
+    color: black;
+    background-color: #c3c9d0b0;
+    border-color: #c3c9d0b0;
+}
+
+/*
+@media screen and (max-width: 600px) {
+    .input-group {
+
+    }
+  } */
+
+  #search-btn:hover {
+    color: #fff;
+    background-color: #c3c9d0e6;
+    border-color: #c3c9d0e6;
+  }

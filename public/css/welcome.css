@@ -1,0 +1,46 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: url("/images/background-landing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 70% !important;/*Set your own width %; */
+   margin-top: 5%;
+}
+
+.login-register {
+    float: right;
+    color:rgb(96, 91, 91);
+}
+
+a.log-reg {
+    color:rgb(96, 91, 91);
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 30px;
+
+}
+
+a.log-reg:hover {
+    text-decoration: none;
+    color: rgb(0, 16, 193);
+}
+
+.title {
+    font-size: 50px;
+    color: dimgrey;
+    letter-spacing: 10px;
+    padding-top: 20%;
+}
+
+.all-you-need {
+    font-family: "Forte";
+    color: #F090AA;
+    padding-top: 25%;
+    letter-spacing: 5px;
+    padding-left: 10%;
+}
