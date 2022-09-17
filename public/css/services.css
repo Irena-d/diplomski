@@ -1,0 +1,16 @@
+.chatapp {
+    /* border: 2px solid grey; */
+}
+.chat-header {
+    text-align: center
+}
+
+#username {
+    width: 100%;
+}
+
+#message_input{width: 200%;}
+
+#message_send {
+    float: right;
+}

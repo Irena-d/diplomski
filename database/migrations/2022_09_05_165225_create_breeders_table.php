@@ -13,10 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mesages', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->text('message');
+        Schema::create('breeders', function (Blueprint $table) {
+            $table->id();
+            $table->any('breeder');
+            $table->string('breed');
+            $table->string('age');
+            $table->string('location');
+            $table->string('price');
+            $table->string('phone');
+            $table->string('photo');
             $table->timestamps();
         });
     }
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mesages');
+        Schema::dropIfExists('breeders');
     }
 };

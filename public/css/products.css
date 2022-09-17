@@ -1,3 +1,33 @@
-#food-name{
-  font-weight: 700;
+.food-image, .toy-image, .other-image {
+    padding-bottom: 4%;
 }
+
+@media only screen and (max-width: 768px) {
+    .name, .producer, .price{
+        padding-left: 0;
+    }
+  }
+
+.food-name-text, .toy-name-text, .other-name-text {
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    font-size: 1.3rem;
+    margin-left: 15%;
+}
+
+.producer-name, .price-name {
+    padding-left: 10%;
+}
+
+.producer-name-text, .price {
+    margin:0;
+    letter-spacing: 0.02rem;
+    color:rgb(127, 125, 123);
+}
+
+.price-number {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+

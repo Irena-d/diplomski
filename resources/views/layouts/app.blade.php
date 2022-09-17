@@ -10,7 +10,8 @@
     <title>{{ config('app.name', 'Doggos') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('/js/app.js') }}" defer></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -50,9 +51,9 @@
                               <i class="fa fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content">
-                                <a href="/products/food">Food</a>
-                                <a href="/products/toys">Toys</a>
-                                <a href="/products/other">Other</a>
+                                <a href="{{ route('products.food') }}">Food</a>
+                                <a href="{{ route('products.toys') }}">Toys</a>
+                                <a href="{{ route('products.other') }}">Other</a>
                             </div>
                           </li>
                         {{-- services --}}
@@ -61,12 +62,12 @@
                               <i class="fa fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content">
-                                <a href="/services/breeders"> Dog Breeders </a>
-                                <a href="/services/vets"> Vets </a>
-                                <a href="/services/groomers"> Groomers </a>
-                                <a href="/services/walkers"> Walkers </a>
-                                <a href="/services/educators"> Educators </a>
-                                <a href="/services/welfare"> Dog welfare </a>
+                                <a href="{{ route('services.breeders') }}"> Dog Breeders</a>
+                                <a href="{{ route('services.vets') }}"> Vets </a>
+                                <a href="{{ route('services.groomers') }}"> Groomers </a>
+                                <a href="{{ route('services.walkers') }}"> Walkers </a>
+                                <a href="{{ route('services.educators') }}"> Educators </a>
+                                <a href="{{ route('services.welfare') }}"> Dog welfare </a>
                             </div>
                           </li>
                         {{-- contact --}}

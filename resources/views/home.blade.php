@@ -5,7 +5,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container search-container">
     <div class="row justify-content-center">
         <div class="col-sm-6">
                 <div class="form-outline">
@@ -24,37 +24,34 @@
 
 @foreach ($dogs as $dog)
 <div class="container">
-    <div class="row">
-        <div class="col">
-            {{-- ovo ne radi --}}
-            {{-- <img src="{{ asset('images/breeds'.$dog->image) }}" alt="Dog's image here"> --}}
-           {{-- samo da imam nesto --}}
-            <img src="images/husky.jpg">
+    <div class="row about-dogs">
+
+        <div class="col-sm-5 pr-1">
+         <img src="{{$dog['image']}}" class="image-part" alt="Dog's image here" width="200" height="300">
         </div>
-        <div class="col">
+
+        <div class="col-sm-7 pl-1">
             <div class="row">
-                <h3>Breed:</h3> <p>{{$dog['name']}}</p>
+                <ul class="title-data-ul"> <li class="dog-title-li"><h3 class="dog-title">Breed:</h3></li> <li class="dog-data-li"><p class="dog-data">{{$dog['name']}}</p></li> </ul>
             </div>
             <div class="row">
-                <h3>From:</h3> <p>{{$dog['from']}}</p>
+                <ul class="title-data-ul"> <li class="dog-title-li"><h3 class="dog-title">From:</h3></li> <li class="dog-data-li"><p class="dog-data">{{$dog['from']}}</p></li> </ul>
             </div>
             <div class="row">
-                <h3>Weight:</h3> <p>{{$dog['weight']}} kg</p>
+                <ul class="title-data-ul"> <li class="dog-title-li"><h3 class="dog-title">Weight:</h3></li> <li class="dog-data-li"> <p class="dog-data">{{$dog['weight']}} kg</p></li> </ul>
             </div>
             <div class="row">
-                <h3>Height:</h3> <p>{{$dog['height']}} cm</p>
+                <ul class="title-data-ul"> <li class="dog-title-li"><h3 class="dog-title">Height:</h3></li> <li class="dog-data-li"> <p class="dog-data">{{$dog['height']}} cm</p></li> </ul>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <h3>Description:</h3>
-            <p>{{$dog['description']}}</p>
+            <h3 class="dog-title">Description:</h3>
+            <p class="dog-data-des">{{$dog['description']}}</p>
         </div>
     </div>
 </div>
-
-
 
 {{-- <h3>ID:</h3> <p>{{$dog['id']}}</p>
 <h3>Breed:</h3> <p>{{$dog['name']}}</p>
@@ -66,3 +63,6 @@
 
 
 @endsection
+
+
+

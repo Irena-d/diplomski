@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Dog;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -26,6 +27,8 @@ class HomeController extends Controller
     {
         $data = Dog::all();
         return view('home', ['dogs' => $data]);
+
+
     }
 
     public function contact()

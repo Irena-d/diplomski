@@ -23,3 +23,49 @@
     background-color: #c3c9d0e6;
     border-color: #c3c9d0e6;
   }
+
+  .image-part {
+    margin-left: 5%;
+
+  }
+
+.search-container
+ {
+    margin-bottom: 2%;
+ }
+
+ .dog-title {
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    font-size: 1.3rem;
+ }
+
+ .dog-data {
+    letter-spacing: 0.05rem;
+    font-weight: 100;
+    font-size: 1.3rem;
+ }
+
+ .title-data-ul, .dog-title-li, .dog-data-li {
+    display: inline-block;
+}
+
+.about-dogs {
+    align-items: center;
+    padding-bottom: 3%;
+}
+
+.dog-data-li {
+    margin-left: 3%;
+}
+
+.dog-data-des {
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    font-weight: 200;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+

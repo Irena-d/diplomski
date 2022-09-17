@@ -1,4 +1,4 @@
-
+{{--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
     <div class="chatapp">
         <header>
             <h1> Chat </h1>
-            <input type="text" name="username" id="username" placeholder="Enter username" />
+            <input type="text" name="username" id="username" placeholder="Enter username.." />
         </header>
         <br>
         <div id="messages"></div>
@@ -27,4 +27,4 @@
     <script src="./js/app.js"></script>
 
 </body>
-</html>
+</html> --}}

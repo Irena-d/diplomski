@@ -8,6 +8,9 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ServicesController;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Http\Controllers\BreedersController;
+use App\Models\Breeder;
+use App\Http\Controllers\ChatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,26 +23,17 @@ use Illuminate\Http\Response;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
 
 Route::get('/search', 'App\Http\Controllers\HomeController@search')->name('search');
-
-
-Route::get('/services', function () {
-    return view('services');
-});
-
-Route::get('/aa', function() {
-    return 'ovo su produkti burazz';
-});
-
 
 Route::post('/send-message', function (Request $request) {
     event(
@@ -55,10 +49,14 @@ Route::get('/products/food', [ProductsController::class, 'food'])->name('product
 Route::get('/products/toys', [ProductsController::class, 'toys'])->name('products.toys');
 Route::get('/products/other', [ProductsController::class, 'other'])->name('products.other');
 
+Route::get('/services/breeders', [ServicesController::class, 'breeders'])->name('services.breeders');
 Route::get('/services/vets', [ServicesController::class, 'vets'])->name('services.vets');
 Route::get('/services/groomers', [ServicesController::class, 'groomers'])->name('services.groomers');
 Route::get('/services/walkers', [ServicesController::class, 'walkers'])->name('services.walkers');
 Route::get('/services/educators', [ServicesController::class, 'educators'])->name('services.educators');
 Route::get('/services/welfare', [ServicesController::class, 'welfare'])->name('services.welfare');
-Route::get('/services/breeders', [ServicesController::class, 'breeders'])->name('services.breeders');
+Route::get('/services/addbreeder', [ServicesController::class, 'addbreeder'])->name('services.addbreeder');
+
+Route::post('create', 'App\Http\Controllers\ServicesController@add');
+
 
