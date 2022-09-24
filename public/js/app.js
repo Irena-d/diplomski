@@ -2173,6 +2173,7 @@ var message_input = document.getElementById("message_input");
 var message_form = document.getElementById("message_form");
 message_form.addEventListener('submit', function (e) {
   e.preventDefault();
+  e.stopImmediatePropagation();
   var has_errors = false;
 
   if (username_input.value == '') {
@@ -2203,9 +2204,8 @@ message_form.addEventListener('submit', function (e) {
   axios(options);
 });
 window.Echo.channel('chat').listen('.message', function (e) {
-  messages_el.innerHTML += '<div class="message"><strong>' + e.username + ':</strong' + e.message + '/<div>';
-}); //.location.hostname za naci rutu
-// $(document).ready(function(){
+  messages_el.innerHTML += '<div> <strong>' + e.username + ':</strong>' + e.message + '</div>';
+}); // $(document).ready(function(){
 //     function nekaF() {console.log("check check");}
 //     $("#clk").click(nekaF);
 // });
@@ -2245,8 +2245,8 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: "ff82cb85866da15f076c",
   cluster: "eu",
-  forceTLS: true,
-  encrypted: true
+  forceTLS: true //encrypted: true
+
 });
 
 /***/ }),
@@ -21106,10 +21106,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26401,7 +26401,7 @@ runtime.setup(pusher_Pusher);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

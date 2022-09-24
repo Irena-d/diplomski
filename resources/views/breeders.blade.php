@@ -3,7 +3,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 {{-- <link rel="stylesheet" href="css\services.css"> --}}
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script type="module" src="../js/app.js"></script>
+<script src="../js/app.js"></script>
 
 @section('content')
     <div class="container">
@@ -78,9 +78,7 @@
                         </div>
                     </header>
                     <br>
-                    <div class="row" id="messages">
-                        {{-- proba <button id="clk">Probaj</button> --}}
-                    </div>
+                    <div class="row" id="messages"></div>
                     <br> <br> <br> <br> <br> <br> <br>
                     <form id="message_form">
                         @csrf
@@ -93,6 +91,7 @@
                     </form>
                 </div>
             </div>
+
 
         </div>
     </div>
@@ -121,6 +120,9 @@
             margin-bottom:0;
         }
     </style>
+
+
+<script>
 
 
 @endsection

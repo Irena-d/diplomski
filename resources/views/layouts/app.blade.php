@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('/js/app.js') }}" defer></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -23,6 +24,8 @@
 
     {{-- Favicon --}}
     <link rel="icon" type="image/png" href="{{asset('/images/icon.png')}}">
+
+
 
 </head>
 <body>
@@ -65,7 +68,7 @@
                                 <a href="{{ route('services.breeders') }}"> Dog Breeders</a>
                                 <a href="{{ route('services.vets') }}"> Vets </a>
                                 <a href="{{ route('services.groomers') }}"> Groomers </a>
-                                <a href="{{ route('services.walkers') }}"> Walkers </a>
+                                <a href="{{ route('services.walkers') }}"> Walkers & Keepers </a>
                                 <a href="{{ route('services.educators') }}"> Educators </a>
                                 <a href="{{ route('services.welfare') }}"> Dog welfare </a>
                             </div>

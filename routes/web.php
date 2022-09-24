@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\BreedersController;
 use App\Models\Breeder;
-use App\Http\Controllers\ChatsController;
+use App\Http\Controllers\SendEmailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact')
 
 Route::get('/search', 'App\Http\Controllers\HomeController@search')->name('search');
 
-Route::post('/send-message', function (Request $request) {
+Route::post('send-message', function (Request $request) {
     event(
         new Message(
             $request->input('username'),
@@ -56,7 +56,16 @@ Route::get('/services/walkers', [ServicesController::class, 'walkers'])->name('s
 Route::get('/services/educators', [ServicesController::class, 'educators'])->name('services.educators');
 Route::get('/services/welfare', [ServicesController::class, 'welfare'])->name('services.welfare');
 Route::get('/services/addbreeder', [ServicesController::class, 'addbreeder'])->name('services.addbreeder');
+Route::get('/services/addvet', [ServicesController::class, 'addvet'])->name('services.addvet');
+Route::get('/services/addgroomer', [ServicesController::class, 'addgroomer'])->name('services.addgroomer');
+Route::get('/services/addwalker', [ServicesController::class, 'addwalker'])->name('services.addwalker');
+Route::get('/services/addeducator', [ServicesController::class, 'addeducator'])->name('services.addeducator');
+
 
 Route::post('create', 'App\Http\Controllers\ServicesController@add');
+Route::post('create', 'App\Http\Controllers\ServicesController@addV');
+Route::post('create', 'App\Http\Controllers\ServicesController@addG');
+Route::post('create', 'App\Http\Controllers\ServicesController@addW');
+Route::post('create', 'App\Http\Controllers\ServicesController@addE');
 
-
+Route::post('sendmail/send', 'App\Http\Controllers\SendEmailController@send');

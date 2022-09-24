@@ -14,8 +14,8 @@ class Message implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $username;
-    public $message;
+    public $username='';
+    public $message='';
 
     /**
      * Create a new event instance.
@@ -26,6 +26,7 @@ class Message implements ShouldBroadcast
     {
         $this->username = $username;
         $this->message = $message;
+
     }
 
     /**
@@ -41,4 +42,5 @@ class Message implements ShouldBroadcast
     public function broadcastAs() {
         return 'message';
     }
+
 }

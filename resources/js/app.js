@@ -8,6 +8,7 @@ const message_form = document.getElementById("message_form");
 
 message_form.addEventListener('submit', function(e) {
     e.preventDefault();
+    e.stopImmediatePropagation();
 
     let has_errors = false;
 
@@ -38,16 +39,13 @@ message_form.addEventListener('submit', function(e) {
     }
 
     axios(options);
-
 });
 
-window.Echo.channel('chat')
+    window.Echo.channel('chat')
         .listen('.message', (e) => {
-            messages_el.innerHTML += '<div class="message"><strong>' + e.username + ':</strong' +
-            e.message + '/<div>';
+            messages_el.innerHTML += '<div> <strong>' + e.username + ':</strong>' +
+            e.message + '</div>';
         });
-
-//.location.hostname za naci rutu
 
 
 // $(document).ready(function(){
